@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Loan Prediction</title>
+</head>
+<body>
+    <h1>Loan Prediction: Self-Service UI</h1>
+    <form method="POST">
+
+        <label for="gender">Gender:</label>
+        <select name="gender" id="gender">
+          <option value=""></option>
+          <option value="Male" selected="selected">Male</option>
+          <option value="Female">Female</option>
+        </select><br><br>
+
+        <label for="married">Married:</label>
+        <select name="married" id="married">
+          <option value=""></option>
+          <option value="Yes" selected="selected">Yes</option>
+          <option value="No">No</option>
+        </select><br><br>
+
+        <label for="dependents">Dependents:</label>
+        <select name="dependents" id="dependents">
+          <option value=""></option>
+          <option value="1" selected="selected">1</option>
+          <option value="2">2</option>
+          <option value="3">3 or more</option>
+        </select><br><br>
+        
+        <label for="education">Education:</label>
+        <select name="education" id="education">
+          <option value=""></option>
+          <option value="Graduate" selected="selected">Graduate</option>
+          <option value="Not Graduate">Not Graduate</option>
+        </select><br><br>
+
+        <label for="self_employed">Self Employed:</label>
+        <select name="self_employed" id="self_employed">
+          <option value=""></option>
+          <option value="Yes">Yes</option>
+          <option value="No" selected="selected">No</option>
+        </select><br><br>
+        
+        <label for="credit_history">Credit History:</label>
+        <select name="credit_history" id="credit_history">
+          <option value=""></option>
+          <option value="1" selected="selected">Yes</option>
+          <option value="0">No</option>
+        </select><br><br>
+
+        <label for="property_area">Property Area:</label>
+        <select name="property_area" id="property_area">
+          <option value=""></option>
+          <option value="Urban" selected="selected">Urban</option>
+          <option value="Semiurban">Semiurban</option>
+          <option value="Rural">Rural</option>
+        </select><br><br>
+
+        <label for="applicant_income">Applicant Income:</label><br>
+        <input type="text" value="12000" name="applicant_income"><br><br>
+
+        <label for="applicant_income">Co-Applicant Income:</label><br>
+        <input type="text" value="10000" name="coapplicant_income"><br><br>
+
+        <label for="loan_amount">Loan Amount:</label><br>
+        <input type="text" value="30000" name="loan_amount"><br><br>
+
+        <label for="loan_amount_term">Loan Amount Term (in months):</label><br>
+        <input type="text" value="360" name="loan_amount_term"><br><br>
+
+        <input type="submit" value="Submit">
+    </form>
+
+    {% if prediction and prediction == 1 %}
+        <h2>Predicted Loan Outcome: Approved.</h2>
+    {% elif prediction and prediction == 0 %}
+        <h2>Predicted Loan Outcome: Rejected.</h2>
+    {% endif %}
+</body>
+</html>
