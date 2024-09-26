@@ -1,82 +1,97 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Loan Prediction</title>
+    <title>Customer Churn Prediction</title>
+    <link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <style> 
+        input[type=submit] {
+          background-color: #04AA6D;
+          border: none;
+          color: white;
+          padding: 16px 32px;
+          text-decoration: none;
+          margin: 4px 2px;
+          cursor: pointer;
+        }
+        input[type=int] {
+            width: 50%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            box-sizing: border-box;
+            border: 1px solid #555;
+            outline: none;
+        }
+        input[type=int]:focus {
+            background-color: lightblue;
+        }
+        select {
+            width: 10%;
+            padding: 16px 20px;
+            border: none;
+            border-radius: 4px;
+            background-color: #f1f1f1;
+        }
+        body {
+            background-color: rgb(234, 230, 201);
+            font-family: "Fira Sans", sans-serif;
+        }
+        div {
+            background-color: rgb(255, 255, 255);
+        }
+        .p3 {
+            font-family: "Fira Sans", sans-serif;
+        }
+        </style>
+
 </head>
 <body>
-    <h1>Loan Prediction: Self-Service UI</h1>
+    <h1>Customer Churn Prediction: Self-Service UI</h1>
     <form method="POST">
+      <h2>Financial Metrics</h2>
 
-        <label for="gender">Gender:</label>
-        <select name="gender" id="gender">
-          <option value=""></option>
-          <option value="Male" selected="selected">Male</option>
-          <option value="Female">Female</option>
-        </select><br><br>
-
-        <label for="married">Married:</label>
-        <select name="married" id="married">
-          <option value=""></option>
-          <option value="Yes" selected="selected">Yes</option>
-          <option value="No">No</option>
-        </select><br><br>
-
-        <label for="dependents">Dependents:</label>
-        <select name="dependents" id="dependents">
-          <option value=""></option>
-          <option value="1" selected="selected">1</option>
-          <option value="2">2</option>
-          <option value="3">3 or more</option>
-        </select><br><br>
+        <label for="avg_long_distance_fee_monthly">Average Monthly Long Distance Data Fee  (Please key in a number):</label><br>
+        <input type="int" value=30 name="avg_long_distance_fee_monthly"><br><br>
         
-        <label for="education">Education:</label>
-        <select name="education" id="education">
-          <option value=""></option>
-          <option value="Graduate" selected="selected">Graduate</option>
-          <option value="Not Graduate">Not Graduate</option>
-        </select><br><br>
-
-        <label for="self_employed">Self Employed:</label>
-        <select name="self_employed" id="self_employed">
-          <option value=""></option>
-          <option value="Yes">Yes</option>
-          <option value="No" selected="selected">No</option>
-        </select><br><br>
+        <label for="total_refunds">Amount Refunded to Customer in the Last Quarter (Please key in a number):</label><br>
+        <input type="int" value=100 name="total_refunds"><br><br>
         
-        <label for="credit_history">Credit History:</label>
-        <select name="credit_history" id="credit_history">
+        <label for="total_charges_quarter">Total Charges to Customer in the last Quarter (Please key in a number):</label><br>
+        <input type="int" value=80 name="total_charges_quarter"><br><br>
+
+        <label for="total_monthly_fee">Total Monthly Fee (Please key in a number):</label><br>
+        <input type="int" value=10 name="total_monthly_fee"><br><br>
+        
+
+        <h2>Non-Financial Metrics</h2>
+
+        <label for="tenure_months">Number of Months where Customer is Retained (Please key in a number):</label><br>
+        <input type="int" value=5 name="tenure_months"><br><br>
+
+        <label for="num_referrals">Number of Referrals Made by Customer (Please key in a number):</label><br>
+        <input type="int" value=3 name="num_referrals"><br><br>
+        
+        <label for="avg_gb_download_monthly">Average monthly downloads in Gigabytes (Please key in a number):</label><br>
+        <input type="int" value=50 name="avg_gb_download_monthly"><br><br>
+
+        <label for="has_phone_service">Does the client have phone service?</label>
+        <select name="has_phone_service" id="has_phone_servicen">
           <option value=""></option>
-          <option value="1" selected="selected">Yes</option>
-          <option value="0">No</option>
+          <option value=1 selected>Yes</option>
+          <option value=0>No</option>
         </select><br><br>
-
-        <label for="property_area">Property Area:</label>
-        <select name="property_area" id="property_area">
-          <option value=""></option>
-          <option value="Urban" selected="selected">Urban</option>
-          <option value="Semiurban">Semiurban</option>
-          <option value="Rural">Rural</option>
-        </select><br><br>
-
-        <label for="applicant_income">Applicant Income:</label><br>
-        <input type="text" value="12000" name="applicant_income"><br><br>
-
-        <label for="applicant_income">Co-Applicant Income:</label><br>
-        <input type="text" value="10000" name="coapplicant_income"><br><br>
-
-        <label for="loan_amount">Loan Amount:</label><br>
-        <input type="text" value="30000" name="loan_amount"><br><br>
-
-        <label for="loan_amount_term">Loan Amount Term (in months):</label><br>
-        <input type="text" value="360" name="loan_amount_term"><br><br>
 
         <input type="submit" value="Submit">
     </form>
 
-    {% if prediction and prediction == 1 %}
-        <h2>Predicted Loan Outcome: Approved.</h2>
-    {% elif prediction and prediction == 0 %}
-        <h2>Predicted Loan Outcome: Rejected.</h2>
+    {% if prediction and prediction > 0.5 %}
+        <h3>Outcome: Customer is likely to churn, consider measures. Prediction: {{ prediction }}</h3>
+    {% elif prediction and prediction > 0 %}
+        <h3>Outcome: Unlikely to churn, continue monitoring. Prediction: {{ prediction }}</h3>
+    {% else %}
+        <h3>Please ensure all fields are filled before submitting.</h3>    
     {% endif %}
 </body>
 </html>

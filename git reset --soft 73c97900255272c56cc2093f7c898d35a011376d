@@ -1,0 +1,103 @@
+[33mcommit 31b9b2a3eb40ebbfea8408a636105282c55c8b48[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m)[m
+Author: Law Jia Hong <law.jia.hong@gmail.com>
+Date:   Thu Sep 26 20:41:08 2024 +0800
+
+    README.md final comments
+
+[33mcommit 0a386c56201187d2a9f1d999b619940f2f705d4d[m
+Author: Law Jia Hong <law.jia.hong@gmail.com>
+Date:   Thu Sep 26 19:56:43 2024 +0800
+
+    Removed venv and catboost files as Github won't accept them via Git push and memory limitations. To recall venv if cloning.
+
+[33mcommit ac949bc083bc9f60401d6d2aa104191ede1ce0ac[m
+Author: Law Jia Hong <law.jia.hong@gmail.com>
+Date:   Thu Sep 26 19:48:10 2024 +0800
+
+    Cleared all outputs in python notebook and renamed README.md to finalise notebook. To check for git commit history.
+
+[33mcommit 2cd8117d3a9f599286995fdeec7f699dc9b4e5a7[m
+Author: Law Jia Hong <law.jia.hong@gmail.com>
+Date:   Thu Sep 26 18:24:50 2024 +0800
+
+    Final save to finalise the project before full deployment. Refer to version 1.1 in Dockerhub for package model.
+
+[33mcommit aed84b1824e78ef76f625d173e2df592f51f761a[m
+Author: Law Jia Hong <law.jia.hong@gmail.com>
+Date:   Thu Sep 26 18:22:20 2024 +0800
+
+    Updated README.md with latest information and cleaned up capstone_final, amended requirements.txt with new code for deployment, amended home.html for cleaner prediction reporting.
+
+[33mcommit 3e2cac8e86ef0963ef5b10b7d366e67dcc3c5138[m
+Author: Law Jia Hong <law.jia.hong@gmail.com>
+Date:   Wed Sep 25 20:12:24 2024 +0800
+
+    Finalised changes to notebook and added Json API Call functionality. Please use capstone_final.ipynb for your model predictions
+
+[33mcommit 0d8b0934e4fffc0fc8bba32b5566fa804570ddd4[m
+Author: Law Jia Hong <law.jia.hong@gmail.com>
+Date:   Tue Sep 24 20:08:00 2024 +0800
+
+    Made significant changes to home.html code to beautify the form.
+
+[33mcommit 5a61e95e1f7c618b45a8d9ffa202a2986a5d75fb[m
+Author: Law Jia Hong <law.jia.hong@gmail.com>
+Date:   Tue Sep 24 06:52:03 2024 +0800
+
+    Added font colour changes to titles and subtitles. Partial testing of font changes.
+
+[33mcommit b07acad4ad5b671908711e015c3f467fc6e06fc8[m
+Author: Law Jia Hong <law.jia.hong@gmail.com>
+Date:   Tue Sep 24 00:00:00 2024 +0800
+
+    Substantial improvement to model through capstone_final notebook, change of model in catboost_model.pkl, and subsequent adjustments to app.py and home.html.
+
+[33mcommit 7d08ac7f4e9e3ae0264f51580f9befd462481fc2[m
+Author: Law Jia Hong <law.jia.hong@gmail.com>
+Date:   Mon Sep 23 23:58:49 2024 +0800
+
+    Substantial improvement to model through uploading of capstone_final notebook and implementation of new model in catboost_model.pkl
+
+[33mcommit b7e9286de51d363c5f9599b3f702c0332a565843[m
+Author: Law Jia Hong <law.jia.hong@gmail.com>
+Date:   Mon Sep 23 19:31:42 2024 +0800
+
+    Changed app.py and model.py to reflect a working prediction model that shows either outcomes.
+
+[33mcommit b4cb1daccd5f848ae7af88a1411cf4a135b31f8a[m
+Author: Law Jia Hong <law.jia.hong@gmail.com>
+Date:   Mon Sep 23 18:20:55 2024 +0800
+
+    Made changes to app.py and model for troubleshooting of Flask app.
+
+[33mcommit a0b203608b3d885948fb2fa6bd1afd082624cac3[m
+Author: Law Jia Hong <law.jia.hong@gmail.com>
+Date:   Sat Sep 21 13:47:30 2024 +0800
+
+    Made some changes to okl file so that it now picks up the model from the notebook.
+
+[33mcommit 73c97900255272c56cc2093f7c898d35a011376d[m[33m ([m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Author: Law Jia Hong <law.jia.hong@gmail.com>
+Date:   Fri Sep 20 20:10:25 2024 +0800
+
+    Added Jupyter notebook and requirements.txt to install packages.
+
+[33mcommit c4c65f0d891f21f68df91cdb48d34e32aa3f1d24[m
+Author: Law Jia Hong <law.jia.hong@gmail.com>
+Date:   Wed Aug 28 21:16:39 2024 +0800
+
+    Add line to README to test git functionality
+
+[33mcommit 78b1da4bd627ac99522da5d392f8e9c3ea54c0eb[m
+Author: jiahonglaw <law.jia.hong@gmail.com>
+Date:   Wed Aug 28 20:44:09 2024 +0800
+
+    Create example hello.txt to test Git repo
+    
+    Stick to a paragraph at most to summarise changes.
+
+[33mcommit 683ea0137e7186be8c500b187090775ced438738[m
+Author: jiahonglaw <law.jia.hong@gmail.com>
+Date:   Mon Aug 12 19:47:15 2024 +0800
+
+    Initial commit

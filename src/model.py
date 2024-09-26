@@ -12,4 +12,4 @@ class Model:
 
     def predict(self, input_features):
         probability = self.model.predict_proba(input_features)[1]
-        return 1 if probability > self.threshold else 0
+        return probability
